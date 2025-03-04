@@ -1,7 +1,7 @@
 package br.com.agenda.jdbc.model;
 
-import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class Contato {
 
@@ -9,19 +9,19 @@ public class Contato {
     private String nome;
     private String email;
     private String telefone;
-    private Date dataCadastro;
+    private Calendar dataCadastro;
 
 
     @Override
     public String toString() {
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
         return "Contato{" +
-                ", id=" + id +
+                " id=" + id +
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
-                "dataCadastro=" + sdf.format(dataCadastro) +
+                ", dataCadastro=" + sdf.format(dataCadastro.getTimeInMillis()) +
                 '}';
     }
 
@@ -57,11 +57,11 @@ public class Contato {
         this.telefone = telefone;
     }
 
-    public Date getDataCadastro() {
+    public Calendar getDataCadastro() {
         return dataCadastro;
     }
 
-    public void setDataCadastro(Date dataCadastro) {
+    public void setDataCadastro(Calendar dataCadastro) {
         this.dataCadastro = dataCadastro;
     }
 }
