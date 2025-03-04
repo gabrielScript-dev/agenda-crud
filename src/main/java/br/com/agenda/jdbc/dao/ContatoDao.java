@@ -1,6 +1,6 @@
 package br.com.agenda.jdbc.dao;
 
-import br.com.agenda.jdbc.ConnectionFactory;
+import br.com.agenda.jdbc.factory.ConnectionFactory;
 import br.com.agenda.jdbc.model.Contato;
 
 import java.sql.*;

@@ -31,7 +31,7 @@ public class Main {
 
 
         System.out.println("=== Buscando contato por ID ===");
-        Contato contatoBuscado = contatoDao.buscaPorId(5L); // Altere o ID conforme necessário
+        Contato contatoBuscado = contatoDao.buscaPorId(1L); // Altere o ID conforme necessário
         if (contatoBuscado != null) {
             System.out.println("Contato encontrado: " + contatoBuscado);
         } else {

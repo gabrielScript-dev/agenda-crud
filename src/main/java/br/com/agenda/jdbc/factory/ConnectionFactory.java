@@ -1,4 +1,4 @@
-package br.com.agenda.jdbc;
+package br.com.agenda.jdbc.factory;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
